@@ -1,0 +1,35 @@
+{
+  "name": "Pay A Coffee",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Redefining the donations over the Internet. Join the new stantard for sending donations in an easy way.",
+  "homepage_url": "http://www.payacoffee.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Pay A Coffee",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "storage",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["src/background/background.js"]
+  },
+  "content_scripts": [
+  {
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": [
+      "src/inject/js/jquery-2.1.0.min.js", "src/inject/js/jquery-ui.min.js", "src/inject/payacoffee.js"
+    ]
+
+  }]
+}
