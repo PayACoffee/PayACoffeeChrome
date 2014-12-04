@@ -198,5 +198,5 @@ function setPreparePayACoffeePayPal() {
 // SET BUTTON FOR BITCOIN
 function setPreparePayACoffeeBitcoin() {
 	PayACoffeeURL = "http://payacoffee.com/donation?" + "type=bitcoin" + "&bitcoin=" + finalBitcoin + "&amount=" + finalAmount + "&title=" + finalTitle;
-  	$("#divDonationBitcoin").html('<a href=' + PayACoffeeURL + ' target="_blank" class="button">Donate ' + finalBitcoinSymbol + " " + finalAmount/425 + ' using Bitcon</a>');
+  	$("#divDonationBitcoin").html('<a href=' + PayACoffeeURL + ' target="_blank" class="button">Donate ' + finalBitcoinSymbol + " " + finalAmount/425 + ' using Bitcoin</a>');
 }
